@@ -22,7 +22,7 @@ describe("URl service class", () => {
       };
       const shortUrl = "abCde";
 
-      urlService.generateShortUrl = sinon.stub().returns(shortUrl);
+      urlService.hashLetters.generate = sinon.stub().returns(shortUrl);
 
       const shortenedUrl = await urlService.shortenOriginalUrl(
         requestData,

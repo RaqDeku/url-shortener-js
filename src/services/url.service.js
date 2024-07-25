@@ -1,4 +1,4 @@
-const generateShortUrl = require("./utils/hash.letters.js");
+const hashClass = require("./utils/hash.letters.js");
 
 /**
  * The Service class which encodes and decodes
@@ -7,13 +7,13 @@ const generateShortUrl = require("./utils/hash.letters.js");
 class UrlService {
   constructor({ urlStore }) {
     this.database = urlStore;
-    this.generateShortUrl = generateShortUrl;
+    this.hashLetters = hashClass;
   }
 
   async shortenOriginalUrl(requestData, host) {
     const originalUrl = requestData.originalUrl;
 
-    const shortenedUrl = this.generateShortUrl();
+    const shortenedUrl = this.hashLetters.generate();
 
     await this.database.insertUrls(shortenedUrl, originalUrl);
 
