@@ -28,7 +28,7 @@ In the root of the project;
    - Add your Database host as DATABASE_HOST
    - Add your Database user as USER
    - Add your Database password as PASSWORD
-   - Add your Database table as DATABASE
+   - Add your Database name as DATABASE
 
 2. To install the server dependencies, open your terminal and run `npm install`
 
