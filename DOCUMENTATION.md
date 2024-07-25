@@ -2,6 +2,21 @@
 
 This is a URL Shortner Service Server developed using Node.js
 
+## Folder Structure
+
+The server code resides in the `src` folder
+
+- ### `__test__` folder
+  Contains the unit test files
+- ### `config` folder
+  Contain the file which connects to mySQL database.
+- ### `db` folder
+  Contain the files which interacts with database.
+- ### `service` folder
+  Contains the files which handles the business logic of the server
+- ### `index.js` file
+  This is the entry file to the server which handles the routes.
+
 ## How to run the server
 
 Make sure you have node.js and mySQL installed on your machine.
@@ -17,7 +32,9 @@ In the root of the project;
 
 2. To install the server dependencies, open your terminal and run `npm install`
 
-4. To Run the server, open your terminal run `npm start`
+3. To Run the server, open your terminal and run `npm start`
+
+4. To Run test, open your terminal and run `npm test`
 
 ## Endpoints
 

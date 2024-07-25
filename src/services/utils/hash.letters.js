@@ -14,4 +14,4 @@ function generateShortUrl(length = 5) {
   return result;
 }
 
-export default generateShortUrl;
+module.exports = generateShortUrl;

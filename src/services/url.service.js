@@ -1,17 +1,19 @@
-import generateShortUrl from "./utils/hash.letters.js";
+const generateShortUrl = require("./utils/hash.letters.js");
 
 /**
- * The URL service class responsible
+ * The Service class which encodes and decodes
+ * the urls
  */
 class UrlService {
   constructor({ urlStore }) {
     this.database = urlStore;
+    this.generateShortUrl = generateShortUrl;
   }
 
   async shortenOriginalUrl(requestData, host) {
     const originalUrl = requestData.originalUrl;
 
-    const shortenedUrl = generateShortUrl();
+    const shortenedUrl = this.generateShortUrl();
 
     await this.database.insertUrls(shortenedUrl, originalUrl);
 
@@ -33,4 +35,4 @@ class UrlService {
   }
 }
 
-export default UrlService;
+module.exports = UrlService;

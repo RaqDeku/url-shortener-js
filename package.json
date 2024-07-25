@@ -4,14 +4,18 @@
   "main": "index.js",
   "scripts": {
     "start": "node --env-file .env src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest"
   },
-  "type": "module",
+  "type": "commonjs",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "mysql2": "^3.10.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "sinon": "^18.0.0"
   }
 }

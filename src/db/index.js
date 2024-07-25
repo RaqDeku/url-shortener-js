@@ -1,8 +1,8 @@
-import UrlStore from "./db.js";
-import { dbPool } from "../config/db.connect.js";
+const UrlStore = require("./db.js");
+const { dbPool } = require("../config/db.connect.js");
 
 // Creates instance of Database class and
 // exports it, to be used in the service class
 const urlStore = new UrlStore({ dbPool });
 
-export default urlStore;
+module.exports = urlStore;

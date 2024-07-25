@@ -39,4 +39,4 @@ class UrlStore {
   }
 }
 
-export default UrlStore;
+module.exports = UrlStore;

@@ -1,7 +1,6 @@
 "use-strict";
-
-import http from "node:http";
-import urlService from "./services/index.js";
+const http = require("node:http");
+const urlService = require("./services/index.js");
 
 const requestListener = async function (req, res) {
   res.setHeader("Content-Type", "application/json");
